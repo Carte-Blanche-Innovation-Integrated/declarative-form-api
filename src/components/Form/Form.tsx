@@ -2,13 +2,12 @@ import { ForwardedRef, forwardRef, useId } from "react";
 import { ButtonContext, ButtonProps } from "react-aria-components";
 import { type FieldValues, FormProvider, useForm } from "react-hook-form";
 
-// import {axiosInstance} from "@/utils/axios.ts";
-import { axiosInstance } from "@/utils/axios.ts";
+import { axiosInstance } from "../../utils/axios.ts";
 
 import { handleSubmissionError } from "./errors.ts";
 import { Provider } from "../Provider.tsx";
-import { forwardRefType } from "@/utils/types.ts";
-import { useContextProps } from "@/utils/use-context-props.ts";
+import { forwardRefType } from "../../utils/types.ts";
+import { useContextProps } from "../../utils/use-context-props.ts";
 
 import { FormContext } from "./context";
 import { applyTransformers } from "./transformers.ts";

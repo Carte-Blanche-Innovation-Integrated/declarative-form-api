@@ -54,21 +54,21 @@ export function useContextProps<T, U extends SlotProps, E extends Element>(
     delete rootCtx.slots;
   }
 
-  // @ts-ignore - TS says "Type 'unique symbol' cannot be used as an index type." but not sure why.
   const {
     ref: rootCtxRef,
+    // @ts-ignore - TS says "Type 'unique symbol' cannot be used as an index type." but not sure why.
     [slotCallbackSymbol]: rootCtxCallback,
     ...rootCtxProps
   } = rootCtx;
-  // @ts-ignore - TS says "Type 'unique symbol' cannot be used as an index type." but not sure why.
   const {
     ref: defaultCtxRef,
+    // @ts-ignore - TS says "Type 'unique symbol' cannot be used as an index type." but not sure why.
     [slotCallbackSymbol]: defaultCtxCallback,
     ...defaultCtxProps
   } = defaultCtx || {};
-  // @ts-ignore - TS says "Type 'unique symbol' cannot be used as an index type." but not sure why.
   const {
     ref: slottedCtxRef,
+    // @ts-ignore - TS says "Type 'unique symbol' cannot be used as an index type." but not sure why.
     [slotCallbackSymbol]: slottedCtxCallback,
     ...slottedCtxProps
   } = slottedCtx || {};
